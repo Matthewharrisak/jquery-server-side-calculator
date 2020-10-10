@@ -30,3 +30,13 @@ function whatsThisEqual() {
         alert(error);
     });
 }
+
+//appends mathObjects array to the DOM
+function problemsOnTheDom (array) {
+    $('#listedProblems').empty(); // emptys array to prevent reapted appends
+    for (let index = 0; index < array.length; index++) {
+    $('#listedProblems').append(`
+    <li> Problem: ${array[index].problem} | Solution ${array[index].solution}</li>
+    `)    
+    }
+}
