@@ -24,8 +24,8 @@ function whatsThisEqual() {
     console.log('hello from the equal sign');
     operatorValue;
     let mathValues = {
-        numOne: $('#numOne').val, 
-        numTwo: $('#numTwo').val,
+        numOne: $('#numOne').val(), 
+        numTwo: $('#numTwo').val(),
         operator: operator
         }
     console.log(mathValues);
