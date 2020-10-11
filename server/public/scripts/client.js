@@ -1,10 +1,11 @@
 console.log('whats up from JS');
 
 $(document).ready(readyNow);
-
+let sum = 0;
 function readyNow() {
     console.log('hello from JQ');
     $('#equal').on('click' , whatsThisEqual);
+    $('.operator').on('click' , operatorButtons);
 }
 
 
@@ -25,7 +26,7 @@ function whatsThisEqual() {
         $('#numOne').val(''), 
         $('#numTwo').val('');
         // get math answer   
-        
+        operatorButtons;
     }).catch(function(error){
         alert(error);
     });
@@ -39,4 +40,22 @@ function problemsOnTheDom (array) {
     <li> Problem: ${array[index].problem} | Solution ${array[index].solution}</li>
     `)    
     }
+}
+
+
+// attaches oprator buttons to click events that return sum
+function operatorButtons() {
+  if (('#addition').click(
+      numOne + numOne == sum
+    ));
+  else if (('#subtraction').click(
+      numOne - numTwo == sum
+  ));
+  else if (('#multiplication').click(
+      numOne * numTwo == sum
+  ));
+  else if (('#division').click(
+      numOne / numTwo == sum
+  ));  
+    return sum;
 }
