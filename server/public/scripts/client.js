@@ -13,6 +13,7 @@ let operator = '';
 let numOne = 0;
 let numTwo = 0;
 
+// takes the operator buttons and assigns a value 
 function operatorValue() {
     operator = event.target.innerHTML;
     console.log(operator);
@@ -28,7 +29,7 @@ function whatsThisEqual() {
         numTwo: $('#numTwo').val(),
         operator: operator
         }
-    console.log(mathValues);
+    console.log('is this where its happening?' , mathValues);
     $.ajax({ // POST request allows us to post values to the server where the logic is stored.
         method: 'POST',
         url: '/mathLogic',
