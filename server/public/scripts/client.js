@@ -6,7 +6,7 @@ function readyNow() {
     getMathObjects();
     $('#equal').on('click' , whatsThisEqual);
     $('.operator').on('click' , operatorValue);
-    
+    $('#clear').on('click', clearItOut);
 }
 
 
@@ -65,6 +65,11 @@ function problemsOnTheDom (mathProblems) {
     }
 }
 
-
+// this function will clear out the inouts 
+function clearItOut() {
+    $('#form').trigger('reset');
+    console.log('inclicked');
+    
+}
 
 // write a 'get' request to pull data from server with mathcalc
