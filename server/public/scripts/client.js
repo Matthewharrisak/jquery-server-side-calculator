@@ -67,7 +67,8 @@ function problemsOnTheDom (mathProblems) {
 
 // this function will clear out the inouts 
 function clearItOut() {
-    $('#form').trigger('reset');
+    $('#numOne').val(''), 
+    $('#numTwo').val('');
     console.log('inclicked');
     
 }
