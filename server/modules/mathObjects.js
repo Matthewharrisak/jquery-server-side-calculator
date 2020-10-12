@@ -1,8 +1,11 @@
-let mathProblems = [
-    {
-        problem : 'Math Values',
-        solution : 'Math Answer'
-    }
-];
+console.log('hello from mathLogic');
 
-module.exports = mathProblems;
+mathProblems = [
+    {
+    numOne: '3',
+    numTwo: '1',
+    operator: '+'
+},
+];
+ 
+  module.exports = mathProblems

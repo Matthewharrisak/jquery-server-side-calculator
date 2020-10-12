@@ -1,7 +1,6 @@
 console.log('whats up from JS');
 
 $(document).ready(readyNow);
-// let sum = 0;
 function readyNow() {
     console.log('hello from JQ');
     $('#equal').on('click' , whatsThisEqual);
@@ -22,17 +21,16 @@ function operatorValue() {
 
 //takes in values from DOM and sends them to server /mathCalc to find the sum of the values.
 function whatsThisEqual() {
-    console.log('hello from the equal sign');
-    operatorValue;
+    operatorValue; // gets operator value
     let mathValues = {
         numOne: $('#numOne').val(), 
         numTwo: $('#numTwo').val(),
         operator: operator
         }
-    console.log('is this where its happening?' , mathValues);
+    console.log(mathValues);
     $.ajax({ // POST request allows us to post values to the server where the logic is stored.
         method: 'POST',
-        url: '/mathLogic',
+        url: '/mathObjects',
         data: mathValues
     }).then(function(response) {
        console.log('response',  response); // response here = math object returned from server
@@ -45,15 +43,15 @@ function whatsThisEqual() {
     });
 }
 
-//appends mathObjects array to the DOM // to the equal sign
-function problemsOnTheDom (array) {
-    $('#listedProblems').empty(); // emptys array to prevent reapted appends
-    for (let index = 0; index < array.length; index++) {
-    $('#listedProblems').append(`
-    <li> Problem: ${array[index].problem} | Solution ${array[index].solution}</li>
-    `)    
-    }
-}
+// //appends mathObjects array to the DOM // to the equal sign
+// function problemsOnTheDom (array) {
+//     $('#listedProblems').empty(); // emptys array to prevent reapted appends
+//     for (let index = 0; index < array.length; index++) {
+//     $('#listedProblems').append(`
+//     <li> Problem: ${array[index].problem} | Solution ${array[index].solution}</li>
+//     `)    
+//     }
+// }
 
 
 
