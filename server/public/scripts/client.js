@@ -1,3 +1,7 @@
+// const { response } = require("express");
+
+// const { response } = require("express");
+answer = 0;
 console.log('whats up from JS');
 
 $(document).ready(readyNow);
@@ -9,7 +13,7 @@ function readyNow() {
     $('#clear').on('click', clearItOut);
 }
 
-let answer = 0;
+
 // uses a get request to recive information from the sever
 function getMathObjects() {
     $.ajax({
@@ -37,7 +41,7 @@ function whatsThisEqual() {
         numOne: $('#numOne').val(), 
         numTwo: $('#numTwo').val(),
         operator: operator,
-        answer: 0
+        
         }
     console.log(mathValues);
     $.ajax({ // POST request allows us to post values to the server where the logic is stored.
@@ -49,6 +53,7 @@ function whatsThisEqual() {
         $('#numOne').val(''), 
         $('#numTwo').val('');
         getMathObjects(); // loads new math object on click event
+       console.log(response.answer);
     }).catch(function(error){
         alert(error);
     });
@@ -60,7 +65,7 @@ function problemsOnTheDom (mathProblems) {
     for (let index = 0; index < mathProblems.length; index++) {
     $('#listedProblems').append(`
     <li>  ${mathProblems[index].numOne}  ${mathProblems[index].operator} 
-     ${mathProblems[index].numTwo} = ${mathProblems[index].answer} </li>
+     ${mathProblems[index].numTwo} = ${answer} </li>
     `)    
     }
 }

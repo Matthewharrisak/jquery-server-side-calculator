@@ -27,6 +27,10 @@ app.post('/mathObjects', (req, res) => {
     let answer = solveThisProblem(req.body.numOne , req.body.numTwo, req.body.operator);
      console.log('this is the answer', answer);
      mathProblems.push(req.body );
+     answeObject = {
+         answer: answer
+     }
+        res.send(answeObject);
          mathProblems.push({answer}); // this line is pushing the variable answer and turning it into an object. 
         res.sendStatus(200);
 });
