@@ -1,11 +1,13 @@
-console.log('hello from mathLogic');
+console.log('hello from mathObjects');
 
-mathProblems = [
+let mathProblems = [
     {
-    numOne: '3',
-    numTwo: '1',
-    operator: '+'
+    numOne: '2',
+    numTwo: '4',
+    operator: '+',
+    answer: ''
 },
 ];
- 
-  module.exports = mathProblems
+
+
+  module.exports = mathProblems 
